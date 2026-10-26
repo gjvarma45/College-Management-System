@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>College Management System</h1>
+<button class="logout-btn" onclick="logout()">Logout</button>
+
+  <section>
+    <h2>Add Student</h2>
+    <form id="student-form">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="roll_no" placeholder="Roll No" required>
+      <button type="submit">Add Student</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Add Course</h2>
+    <form id="course-form">
+      <input type="text" id="course_name" placeholder="Course Name" required>
+      <input type="text" id="course_code" placeholder="Course Code" required>
+      <button type="submit">Add Course</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Enroll Student in Course</h2>
+    <form id="enroll-form">
+      <select id="student-select" required></select>
+      <select id="course-select" required></select>
+      <button type="submit">Enroll</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Students</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Roll No</th>
+          <th>Enrolled Courses</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="student-table"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Courses</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Course Name</th>
+          <th>Course Code</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="course-table"></tbody>
+    </table>
+  </section>
+<div id="edit-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 id="modal-title"></h2>
+    <form id="edit-form">
+      <input type="text" id="edit-field-1">
+      <input type="text" id="edit-field-2">
+      <input type="text" id="edit-field-3">
+      <p id="modal-error"></p>
+      <div class="modal-buttons">
+        <button type="submit">Save</button>
+        <button type="button" id="cancel-edit" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
